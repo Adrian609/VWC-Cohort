@@ -2,4 +2,98 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.item-1 {
+  background: url(images/wsf.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.item-2 {
+  background-color: red;
+}
+.item-3 {
+  background-color: green;
+}
+.item-4 {
+  background-color: blue;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "one one two three three"
+      "one one four five five"
+      "six seven seven five five"
+      "six eight nine nine ten";
+  }
+
+  .item-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(images/wsf.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-size: 60px;
+    grid-area: one;
+  }
+  .item-2 {
+    background-color: blue;
+    grid-area: two;
+  }
+  .item-3 {
+    background-color: green;
+    grid-area: three;
+  }
+  .item-4 {
+    background-color: yellow;
+    grid-area: four;
+  }
+  .item-5 {
+    background-color: aqua;
+    grid-area: five;
+  }
+  .item-6 {
+    background-color: chartreuse;
+    grid-area: six;
+  }
+  .item-7 {
+    background-color: chocolate;
+    grid-area: seven;
+  }
+  .item-8 {
+    background-color: cornflowerblue;
+    grid-area: eight;
+  }
+  .item-9 {
+    background-color: coral;
+    grid-area: nine;
+  }
+  .item-10 {
+    background-color: darkgoldenrod;
+    grid-area: ten;
+  }
 }
