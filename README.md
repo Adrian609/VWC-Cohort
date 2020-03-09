@@ -4,4 +4,4 @@
 
 ## CSS Grid and Flexbox Project
 
-[Live Demo]()
+[Live Demo](week2.surge.sh)
