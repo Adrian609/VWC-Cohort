@@ -19,3 +19,11 @@
       "sd sd sd main main main main main main"
       "ft ft ft ft   ft   ft   ft   ft   ft";
 }
+.wrapper > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+
