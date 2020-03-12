@@ -18,7 +18,8 @@
 }
 
 .hg__header {
-    background-color:rgb(53, 228, 18);
+	background-color:rgb(53, 228, 18);
+	background: linear-gradient(to right, rgb(73, 228, 73), rgb(53, 50, 50));
     border-radius: 10px;
 }
 @media screen and (max-width: 600px) {
@@ -38,13 +39,14 @@
 }
 
 .hg__left {
-    background-color: rgb(59, 216, 93);
+	background-color: rgb(59, 216, 93);
+	background: linear-gradient(to bottom, rgb(73, 228, 73), rgb(53, 50, 50));
     border-radius: 10px;
 }
 
 .hg__main {
-    background-color: rgb(16, 243, 65);
-    color: rgb(10, 27, 10);
+	background-image: url("https://i.gifer.com/3HeZ.gif");
+	color: rgb(233, 241, 233);
     border-radius: 10px;
     
 }
@@ -60,9 +62,11 @@ a:hover {
   }
     
     iframe {
+		/*
 	display: block;
     width: 720px;
-    height: 405px;
+	height: 405px;*/
+	
     margin: 0 auto; 
     border-radius: 10px;
 }
