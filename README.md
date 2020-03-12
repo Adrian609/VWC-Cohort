@@ -7,3 +7,5 @@ I fixed centering the video and map.
 Dress up the overall look to the webpage.
 
 Uploaded a favicon.
+
+Added responsive text.
