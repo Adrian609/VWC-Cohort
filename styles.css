@@ -19,7 +19,7 @@
 
 .hg__header {
 	background-color:rgb(53, 228, 18);
-	background: linear-gradient(to right, rgb(73, 228, 73), rgb(53, 50, 50));
+	background: linear-gradient(to top, rgb(73, 228, 73), rgb(53, 50, 50));
     border-radius: 10px;
 }
 @media screen and (max-width: 600px) {
@@ -40,7 +40,7 @@
 
 .hg__left {
 	background-color: rgb(59, 216, 93);
-	background: linear-gradient(to bottom, rgb(73, 228, 73), rgb(53, 50, 50));
+	background: linear-gradient(185deg, rgb(73, 228, 73), rgb(53, 50, 50));
     border-radius: 10px;
 }
 
@@ -77,7 +77,8 @@ a:hover {
 }
 
 .hg__right {
-    background-color: rgb(59, 216, 93);
+	background-color: rgb(59, 216, 93);
+	background: linear-gradient(150deg, rgb(73, 228, 73), rgb(53, 50, 50));
     border-radius: 10px;
 	}
 	
