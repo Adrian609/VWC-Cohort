@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grid Layout Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheet.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
+  <body>
+    <div class="gridContainer">
+      <div class="header">
+        Learning CSS: grid-template-areas
+      </div>
+
+      <div class="sidebar">
+        <h2 class="resources">Resources</h2>
+        <button
+          class="button"
+          role="button"
+          onclick="window.location.href = 'https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas';"
+        >
+          MDN web docs
+        </button>
+        <button
+          class="button"
+          role="button"
+          onclick="window.location.href = 'https://www.w3schools.com/cssref/pr_grid-template-areas.asp';"
+        >
+          w3schools
+        </button>
+        <button
+          class="button"
+          role="button"
+          onclick="window.location.href = 'https://www.smashingmagazine.com/2020/02/understanding-css-grid-template-areas/';"
+        >
+          Smashing Magazine
+        </button>
+        <button
+          class="button"
+          role="button"
+          onclick="window.location.href = 'https://css-tricks.com/snippets/css/complete-guide-grid/';"
+        >
+          CSS-Tricks
+        </button>
+        <button
+          class="button"
+          role="button"
+          onclick="window.location.href = 'https://alligator.io/css/css-grid-layout-grid-areas/';"
+        >
+          alligator.io
+        </button>
+      </div>
+
+      <div class="contentOne">
+        <h1>Understanding grid-template-areas</h1>
+        <div class="iframeContainer">
+          <iframe
+            class="videoFrame"
+            src="https://www.youtube.com/embed/LI9GoAPNfEw"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="contentTwo">
+        <h1>
+          By exploring the CodePen example below, you can see how the width and
+          height of each grid item is determined.
+        </h1>
+        </br>
+        <p>
+          There are two columns. The first column has a width of 1fr. The second
+          column has a width of 2fr. When added together the width totals three
+          fractions, meaning the first column occupies 1/3rd of the width while
+          the second column occupies the remaining 2/3rds of the width.
+        </p>
+        </br>      
+        <h1>
+          <i>What fraction of the height is occupied by box 5?</i>
+        </h1>
+        <p
+          class="codepen"
+          data-height="665"
+          data-theme-id="dark"
+          data-default-tab="css,result"
+          data-user="nbhankes"
+          data-slug-hash="JjdLKVd"
+          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+          data-pen-title="Grid Template Example"
+        >
+        <span
+          >See the Pen
+          <a href="https://codepen.io/nbhankes/pen/JjdLKVd">
+            Grid Template Example</a
+          >
+            by Nate Hankes (<a href="https://codepen.io/nbhankes">@nbhankes</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span
+          >
+        </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/657104b75a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="footer">
+      <p>Created by N. B. Hankes</p>
+      <div class="socialMediaBackground">
+        <div class="socialMedia">
+          <a href="https://twitter.com/nbhankes">
+            <span style="font-size: 4em; color: #00acee;">
+              <i class="fab fa-twitter-square"></i>
+            </span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/nbhankes">
+            <span style="font-size: 4em; color: #0077B5;">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+
+          <a href="https://github.com/nbhankes">
+            <span style="font-size: 4em; color: #24292e;">
+              <i class="fab fa-github-square"></i>
+            </span>
+          </a>
+
+          <a href="https://codepen.io/nbhankes">
+            <span style="font-size: 4em; color: black;">
+              <i class="fab fa-codepen"></i>
+            </span>
+          </a>
+
+          <a href="https://dev.to/nbhankes">
+            <span style="font-size: 4em; color: black;">
+              <i class="fab fa-dev"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
