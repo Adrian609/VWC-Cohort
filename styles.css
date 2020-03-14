@@ -1,86 +1,161 @@
-.hg__header { grid-area: header; }
-.hg__footer { grid-area: footer; }
-.hg__main { grid-area: main; }
-.hg__left { grid-area: navigation; }
-.hg__right { grid-area: ads; }
-
-.hg {
-	display: grid;
-	grid-template-areas: "header header header"
-	                     "navigation main ads"
-	                     "footer footer footer";
-	grid-template-columns: 150px 1fr 450px;
-	grid-template-rows: 100px 
-						1fr
-						30px;
-    min-height: 80vh;
-   
+.container {
+  display: grid;
+  grid-template-rows: 12rem 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "hd hd logo logo"
+    "con1 con1 con2 con2"
+    "vid vid map map"
+    "ft ft ft ft";
+   color: rgb(5,79,148) 
+} 
+.header {
+  background-color: rgb(5, 79, 148);
+  grid-area: hd;
+  display: flex;
+  border: solid;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-
-.hg__header {
-	background-color:rgb(53, 228, 18);
-	background: linear-gradient(to right, rgb(73, 228, 73), rgb(53, 50, 50));
-    border-radius: 10px;
+.logo {
+  grid-area: logo;
+  display: flex;
+  background-color: rgb(5 , 79, 148);
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (max-width: 600px) {
-	.hg {
-		grid-template-areas: "header"
-		                     "navigation"
-		                     "main"
-		                     "ads"
-		                     "footer";
-		grid-template-columns: 100%;
-		grid-template-rows: 100px 
-							50px 
-							1fr
-							50px 
-							30px;
-	}
+.content1 {
+  grid-area: con1;
+  border: solid;
+  color: black;
 }
-
-.hg__left {
-	background-color: rgb(59, 216, 93);
-	background: linear-gradient(to bottom, rgb(73, 228, 73), rgb(53, 50, 50));
-    border-radius: 10px;
+h1 {
+  text-align: center;
+  color: white;
 }
-
-.hg__main {
-	background-image: url("https://i.gifer.com/3HeZ.gif");
-	color: rgb(233, 241, 233);
-    border-radius: 10px;
-    
+h2 {
+  color: black;
+  text-align: center;
 }
-
-
-.container{
-    width: 80%;
-    margin: auto;
+p {
+  text-align: center;
 }
-
-a {
-	color: blue;
-	transition: all .2s linear;
-   }
-   
-a:hover {
-    color: red;
+.content2 {
+  grid-area: con2;
+  border: solid;
+  color: black;
+}
+.lineup {
+  grid-area: 4 / 5;
+}
+.video {
+  grid-area: vid;
+  border: solid;
+  background-color: rgb(5 , 79, 148);
+  border-color: white;
+}
+.video-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.video-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.video-container-4x3 {
+  padding-top: 75%;
+}
+.map {
+  grid-area: map;
+  border: solid;
+  background-color: rgb(5 , 79, 148);
+  border-color: white;
+}
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.iframe-container-4x3 {
+  padding-top: 75%;
+}
+.footer {
+  grid-area: ft;
+  border: solid;
+  border-color: white;
+  background-color: rgb(5, 79, 148);
+  display: flex;
+  justify-content: space-around;
+}
+.mlb {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.address {
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  background-color: rgb(5 , 79, 148);
+}
+li a {
+  display: block;
+  width: 100px;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  border: solid black 1px;
+}
+li a:hover {
+  background-color: grey;
+  color: white;
+}
+.button-link {
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(5 , 79, 148);
+  border: none;
+}
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 12px;
   }
-    
-    iframe {
-		/*
-	display: block;
-    width: 720px;
-	height: 405px;*/
-	
-    margin: 0 auto; 
-    border-radius: 10px;
 }
 
-.hg__right {
-    background-color: rgb(59, 216, 93);
-    border-radius: 10px;
-	}
-	
-	@media (min-width: 640px) { body {font-size:1rem;} } 
-	@media (min-width:960px) { body {font-size:1.2rem;} } 
-	@media (min-width:1100px) { body {font-size:1.5rem;} } 
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 11px;
+  }
+
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 11px;
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  * {
+    width: 100%
+  }
