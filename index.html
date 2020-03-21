@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Grid Layout Tutorial</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Galactic</title>
+    <link rel="stylesheet" href="default.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,139 +18,164 @@
   </head>
 
   <body>
-    <div class="gridContainer">
-      <div class="header">
-        Learning CSS: grid-template-areas
+    <div class="navBar">
+      <div class="navContainer">
+        <nav id="page-nav">
+          <label for="hamburger">&#9776;</label>
+          <input type="checkbox" id="hamburger" />
+          <ul>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="l">Courses</a></li>
+            <li><a href="">Forum</a></li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="sidebar">
-        <h2 class="resources">Resources</h2>
-        <button
-          class="button"
-          role="button"
-          onclick="window.location.href = 'https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas';"
-        >
-          MDN web docs
-        </button>
-        <button
-          class="button"
-          role="button"
-          onclick="window.location.href = 'https://www.w3schools.com/cssref/pr_grid-template-areas.asp';"
-        >
-          w3schools
-        </button>
-        <button
-          class="button"
-          role="button"
-          onclick="window.location.href = 'https://www.smashingmagazine.com/2020/02/understanding-css-grid-template-areas/';"
-        >
-          Smashing Magazine
-        </button>
-        <button
-          class="button"
-          role="button"
-          onclick="window.location.href = 'https://css-tricks.com/snippets/css/complete-guide-grid/';"
-        >
-          CSS-Tricks
-        </button>
-        <button
-          class="button"
-          role="button"
-          onclick="window.location.href = 'https://alligator.io/css/css-grid-layout-grid-areas/';"
-        >
-          alligator.io
-        </button>
-      </div>
+      <div class="searchContainer">
+        <div>
+          <span style="font-size: 2.5em; color: black;">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
 
-      <div class="contentOne">
-        <h1>Understanding grid-template-areas</h1>
-        <div class="iframeContainer">
-          <iframe
-            class="videoFrame"
-            src="https://www.youtube.com/embed/LI9GoAPNfEw"
-            allowfullscreen
-          ></iframe>
+        <div>
+          <input
+            class="searchInput"
+            type="search"
+            placeholder="Search"
+            style="padding: 12px 20px; color=black;"
+          />
         </div>
       </div>
-
-      <div class="contentTwo">
-        <h1>
-          By exploring the CodePen example below, you can see how the width and
-          height of each grid item is determined.
-        </h1>
-        </br>
-        <p>
-          There are two columns. The first column has a width of 1fr. The second
-          column has a width of 2fr. When added together the width totals three
-          fractions, meaning the first column occupies 1/3rd of the width while
-          the second column occupies the remaining 2/3rds of the width.
-        </p>
-        </br>      
-        <h1>
-          <i>What fraction of the height is occupied by box 5?</i>
-        </h1>
-        <p
-          class="codepen"
-          data-height="665"
-          data-theme-id="dark"
-          data-default-tab="css,result"
-          data-user="nbhankes"
-          data-slug-hash="JjdLKVd"
-          style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-          data-pen-title="Grid Template Example"
-        >
-        <span
-          >See the Pen
-          <a href="https://codepen.io/nbhankes/pen/JjdLKVd">
-            Grid Template Example</a
-          >
-            by Nate Hankes (<a href="https://codepen.io/nbhankes">@nbhankes</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span
-          >
-        </p>
-      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
     </div>
 
-    <script
-      src="https://kit.fontawesome.com/657104b75a.js"
-      crossorigin="anonymous"
-    ></script>
+    <div class="logoContainer">
+      <div class="logo">
+        <span style="font-size: 6em; color: black;">
+          <i class="fas fa-user-astronaut"></i>
+        </span>
+      </div>
+    </div>
 
-    <div class="footer">
-      <p>Created by N. B. Hankes</p>
-      <div class="socialMediaBackground">
+    <div class="formContainer">
+      <div class="siteDescription">
+        <p class="mainText">
+          At Galactic, we connect students with the world's best
+          teachers.
+        </p>
+        </br>
+        </br>
+        <p class="lesserText">
+          Upgrade your life. Uplevel your mind. And prepare for launch.
+        </p>
+      </div>
+      <form class="signUpForm">
+        <div class="formHeader">
+          <p><b>Free student access for 14 days</b>.</p>
+          <p>Starts at $9 per month.</p>
+        </div>
+        <div class="radioContainer">
+            <ul class="radioButtons">
+              <label for="userType">Student</label>
+              <input type="radio">
+            </ul>
+            <ul>
+              <label for="userType">Teacher</label>
+              <input type="radio">
+            </ul>
+        </div>
+        <div class="formInputs"></div>
+          <ul>
+            <label class="formLabel" for="name">First Name</label>
+          </br>
+            <input class="formInput" type="text" id="name" name="first_name">
+          </ul>
+          <ul>
+            <label class="formLabel" for="name">Last Name</label>
+          </br>
+            <input class="formInput" type="text" id="name" name="last_name">
+          </ul>
+          <ul>
+            <label class="formLabel" for="mail">Email</label>
+          </br>
+            <input class="formInput" type="email" id="mail" name="user_mail">
+          </ul>
+          <ul class="buttonContainer">
+            <button type="submit">Submit</button>
+          </ul>
+        </div>
+      </form>
+    </div>
+
+    <div class="videoIntro">With Galactic MasterClass, the world's highest performers will teach you the skills and mindset that propelled them up into the stratosphere.
+
+    </div>
+
+    <div class="iframeContainer">
+      <iframe width="424" height="238" src="https://www.youtube.com/embed/yNnAbtIyfd8" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="mapContainer">
+      <div class="bottomText">
+        <h1>With over 500 in-person workshops per year, you'll receive mentorship directly from the best.</h1>
+      </br>
+        <h2>Small class sizes.</h2>
+        <h2>Guaranteed one-on-one coaching.</h2>
+        <h2>All-inclusive service.</h2>
+        <h2>100% chance to uplevel your life.</h2>
+      </div>
+      <div class="bottomContainer">
+        <div class="venueList">
+          <h2>London.</h2>
+          <h2>Paris.</h2>
+          <h2>New York.</h2>
+          <h2>Chicago.</h2>
+          <h2>San Francisco</h2>
+          <h2>Melbourne.</h2>
+          <h2>Maui.</h2>
+          <h2>San Diego.</h2>
+          <h2>Perth.</h2>
+          <h2>And more.</h2>
+        </div>
+        <div class="mapEmbed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d403759.40784738905!2d-122.71710362129471!3d37.757912902342525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1584811890770!5m2!1sen!2sus" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="footerList">
+          <h3>About</h3>
+          <h3>Contact</h3>
+          <h3>Advertise</h3>
+          <h3>Support</h3>
+        </div>
         <div class="socialMedia">
           <a href="https://twitter.com/nbhankes">
             <span style="font-size: 4em; color: #00acee;">
               <i class="fab fa-twitter-square"></i>
             </span>
           </a>
-
+  
           <a href="https://www.linkedin.com/in/nbhankes">
             <span style="font-size: 4em; color: #0077B5;">
               <i class="fab fa-linkedin"></i>
             </span>
           </a>
-
+  
           <a href="https://github.com/nbhankes">
-            <span style="font-size: 4em; color: #24292e;">
-              <i class="fab fa-github-square"></i>
-            </span>
-          </a>
-
-          <a href="https://codepen.io/nbhankes">
-            <span style="font-size: 4em; color: black;">
-              <i class="fab fa-codepen"></i>
-            </span>
-          </a>
-
-          <a href="https://dev.to/nbhankes">
-            <span style="font-size: 4em; color: black;">
-              <i class="fab fa-dev"></i>
+            <span style="font-size: 4em; color: #406cc8;">
+               <i class="fab fa-facebook-square"></i>
             </span>
           </a>
         </div>
       </div>
-    </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/657104b75a.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
