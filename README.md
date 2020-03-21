@@ -9,3 +9,5 @@ The project consisted of using grid-template-areas with the following requiremen
 - Add a button
 
 This project was completed on 3/12/2020 and is on display at [CodePen: nbhankes](https://codepen.io/nbhankes/pen/bGdavjx)
+
+This projectr was re-designed and re-submitted on 3/21/2020 and is on display at [CodePen: Nate Hankes (https://codepen.io/nbhankes/pen/KKpxdxg)
