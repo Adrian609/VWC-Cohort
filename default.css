@@ -1,0 +1,582 @@
+//CSS Reset --- https://meyerweb.com/eric/tools/css/reset/ //
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//My Design//
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 10em 3em 6em;
+    grid-template-rows: 5em 5em 5em 2em 5em 5em 5em;
+    grid-template-areas:
+      "num wordOne numExp"
+      "numUnit numUnit numUnit"
+      "numComp numComp numComp"
+      "break break break"
+      "denom wordTwo denomExp"
+      "denomUnit denomUnit denomUnit"
+      "denomComp denomComp denomComp";
+    width: 100%;
+    height: auto;
+    border: solid;
+    padding: 0.5rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 3em;
+  }
+
+  .num {
+    grid-area: num;
+  }
+
+  .wordOne {
+    grid-area: wordOne;
+    font-size: 3em;
+    color: darkgray;
+    font-family: sans-serif;
+    padding-left: 0.3em;
+  }
+
+  .numExp {
+    grid-area: numExp;
+  }
+
+  .numUnit {
+    grid-area: numUnit;
+  }
+
+  .numComp {
+    grid-area: numComp;
+  }
+
+  .break {
+    grid-area: break;
+    background-color: #6a6860;
+  }
+
+  .denom {
+    grid-area: denom;
+  }
+
+  .wordTwo {
+    grid-area: wordTwo;
+    font-size: 3em;
+    color: darkgray;
+    font-family: sans-serif;
+    padding-left: 0.3em;
+  }
+
+  .denomExp {
+    grid-area: denomExp;
+  }
+
+  .denomUnit {
+    grid-area: denomUnit;
+  }
+
+  .denomComp {
+    grid-area: denomComp;
+  }
+
+  ::placeholder {
+    color: lightgray;
+    opacity: 0.5;
+    text-align: center;
+  }
+
+  input {
+    font-size: 3rem;
+  }
+
+  select {
+    font-size: 3rem;
+  }
+
+  .buttonContainer button {
+    width: 10rem;
+    height: 5rem;
+    font-size: 3rem;
+  }
+}
+
+.topbar {
+  height: 4rem;
+  width: 100%;
+  background-color: #b4b3ae;
+}
+
+.topContainer {
+  display: flex;
+  width: 100%;
+}
+
+.arrowLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  height: 11rem;
+
+  background-color: #4c4a45;
+}
+
+.arrowRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  height: 11rem;
+  background-color: #4c4a45;
+}
+
+.notebookCF {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+  height: 11rem;
+  background-color: #76746b;
+}
+
+.topContainer button {
+  border: solid 0.1rem black;
+  background-color: white;
+  color: black;
+  height: auto;
+  width: auto;
+}
+
+.equation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15rem;
+  background-color: #b4b3ae;
+
+  margin-bottom: 1rem;
+}
+
+.notebookCF .gridContainer {
+  display: grid;
+  grid-template-columns: 3rem 1rem 2rem;
+  grid-template-rows: 1.5rem 1.5rem 1.5rem 0.2rem 1.5rem 1.5rem 1.5rem;
+  grid-template-areas:
+    "num wordOne numExp"
+    "numUnit numUnit numUnit"
+    "numComp numComp numComp"
+    "break break break"
+    "denom wordTwo denomExp"
+    "denomUnit denomUnit denomUnit"
+    "denomComp denomComp denomComp";
+  width: 6.4rem;
+  height: auto;
+  border: solid 0.05rem;
+  padding: 0rem;
+  background-color: white;
+}
+
+.notebookCF .container {
+  display: flex;
+  justify-content: center;
+}
+
+.notebookCF .num {
+  grid-area: num;
+}
+
+.notebookCF .wordOne {
+  grid-area: wordOne;
+  font-size: 1.5rem;
+  color: darkgray;
+  font-family: sans-serif;
+  padding-left: 0.05rem;
+}
+
+.notebookCF .numExp {
+  grid-area: numExp;
+}
+
+.notebookCF .numUnit {
+  grid-area: numUnit;
+}
+
+.notebookCF .numComp {
+  grid-area: numComp;
+}
+
+.notebookCF .break {
+  grid-area: break;
+  width: 6.3rem;
+  background-color: #6a6860;
+}
+
+.notebookCF .denom {
+  grid-area: denom;
+}
+
+.notebookCF .wordTwo {
+  grid-area: wordTwo;
+  font-size: 1.5rem;
+  color: darkgray;
+  font-family: sans-serif;
+  padding-left: 0.1rem;
+}
+
+.notebookCF .denomExp {
+  grid-area: denomExp;
+}
+
+.notebookCF .denomUnit {
+  grid-area: denomUnit;
+}
+
+.notebookCF .denomComp {
+  grid-area: denomComp;
+}
+
+.notebookCF input {
+  font-size: 1em;
+}
+
+.notebookCF select {
+  font-size: 1em;
+}
+
+.equation .gridContainer {
+  display: grid;
+  grid-template-columns: 3rem 1rem 2rem;
+  grid-template-rows: 1.5rem 1.5rem 1.5rem 0.2rem 1.5rem 1.5rem 1.5rem;
+  grid-template-areas:
+    "num wordOne numExp"
+    "numUnit numUnit numUnit"
+    "numComp numComp numComp"
+    "break break break"
+    "denom wordTwo denomExp"
+    "denomUnit denomUnit denomUnit"
+    "denomComp denomComp denomComp";
+  width: 6.12em;
+  height: 9.4em;
+  border: solid 0.05rem;
+  padding: 0rem;
+  background-color: white;
+  margin: 0.5em 0.5em;
+}
+
+.equation .num {
+  grid-area: num;
+}
+
+.equation .wordOne {
+  grid-area: wordOne;
+  font-size: 1.5rem;
+  color: darkgray;
+  font-family: sans-serif;
+  padding-left: 0.05rem;
+}
+
+.equation .numExp {
+  grid-area: numExp;
+}
+
+.equation .numUnit {
+  grid-area: numUnit;
+}
+
+.equation .numComp {
+  grid-area: numComp;
+}
+
+.equation .break {
+  grid-area: break;
+  width: 6.1em;
+  background-color: #6a6860;
+}
+
+.equation .denom {
+  grid-area: denom;
+}
+
+.equation .wordTwo {
+  grid-area: wordTwo;
+  font-size: 1.5rem;
+  color: darkgray;
+  font-family: sans-serif;
+  padding-left: 0.1rem;
+}
+
+.equation .denomExp {
+  grid-area: denomExp;
+}
+
+.equation .denomUnit {
+  grid-area: denomUnit;
+}
+
+.equation .denomComp {
+  grid-area: denomComp;
+}
+
+.equation input {
+  font-size: 1em;
+}
+
+.equation select {
+  font-size: 1em;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 10em 3em 6em;
+  grid-template-rows: 5em 5em 5em 2em 5em 5em 5em;
+  grid-template-areas:
+    "num wordOne numExp"
+    "numUnit numUnit numUnit"
+    "numComp numComp numComp"
+    "break break break"
+    "denom wordTwo denomExp"
+    "denomUnit denomUnit denomUnit"
+    "denomComp denomComp denomComp";
+  width: 100%;
+  height: auto;
+  border: solid;
+  padding: 0.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 3em;
+}
+
+.num {
+  grid-area: num;
+}
+
+.wordOne {
+  grid-area: wordOne;
+  font-size: 3em;
+  color: darkgray;
+  font-family: sans-serif;
+  padding-left: 0.3em;
+}
+
+.numExp {
+  grid-area: numExp;
+}
+
+.numUnit {
+  grid-area: numUnit;
+}
+
+.numComp {
+  grid-area: numComp;
+}
+
+.break {
+  grid-area: break;
+  background-color: #6a6860;
+}
+
+.denom {
+  grid-area: denom;
+}
+
+.wordTwo {
+  grid-area: wordTwo;
+  font-size: 3em;
+  color: darkgray;
+  font-family: sans-serif;
+  padding-left: 0.3em;
+}
+
+.denomExp {
+  grid-area: denomExp;
+}
+
+.denomUnit {
+  grid-area: denomUnit;
+}
+
+.denomComp {
+  grid-area: denomComp;
+}
+
+::placeholder {
+  color: lightgray;
+  opacity: 0.5;
+  text-align: center;
+}
+
+input {
+  font-size: 3rem;
+}
+
+select {
+  font-size: 3rem;
+}
+
+.buttonContainer button {
+  width: 10rem;
+  height: 5rem;
+  font-size: 3rem;
+}
